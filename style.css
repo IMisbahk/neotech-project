@@ -1,0 +1,124 @@
+
+.logo{
+    cursor: pointer;
+    justify-content:flex-start;
+    padding: 1rem;
+}
+*
+{
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    text-decoration-color: black;
+}
+ body{
+    overflow-x: hidden;
+ }
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0; 
+    margin: 0;
+    height: 4rem;
+    width: 100%;
+    background-color: #0869d8;
+    list-style-type: none;
+}
+.navlink {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0; 
+    padding: 1rem;
+    font-size: large;
+    color: black;
+}
+
+.navlink:hover {
+    transform: scale(1.2); 
+}
+
+/*carousel code*/
+.slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider img{
+    width: 100%;
+    display: none;
+}
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position: absolute;
+    top: 50%;
+    margin: 10px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 10px;
+    background-color: hsla(0, 0%, 0%, 0.113);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.slides
+{
+    margin: 0;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+.mainsec {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    padding: 20px;
+    max-width: 100%; 
+    box-sizing: border-box; 
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.event {
+    background-color: #0869d8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    width: 100%; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+@media (max-width: 800px) {
+    .mainsec {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .mainsec {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.event:hover
+{
+    transform: scale(1.02);
+}
+footer{
+    background-color: green;
+    height: 150px;
+    width: 100vw;
+}
