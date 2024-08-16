@@ -1,3 +1,4 @@
+//carousel code
 const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0;
 let intervalId = null;
@@ -35,3 +36,7 @@ function nextSlide(){
     slideIndex++;
     showSlide(slideIndex);
 }
+
+//tile expanding code
+const tile = document.querySelectorAll('.event')
+
