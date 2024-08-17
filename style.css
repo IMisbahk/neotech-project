@@ -122,3 +122,73 @@ footer{
     height: 150px;
     width: 100vw;
 }
+.mainsec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.event {
+    width: 30%;
+    height: 150px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.event:hover {
+    background-color: #ddd;
+}
+
+.cont {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.contcontent {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;  /* Adjust this percentage to make it smaller or larger */
+    max-width: 1000px; /* Maximum width for large screens */
+    max-height: 90vh; /* Keep some vertical margin */
+    overflow: auto;  /* Add scroll if content is too long */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#contbody {
+    font-size: 24px;
+    line-height: 1.5;
+}

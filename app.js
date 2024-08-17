@@ -37,6 +37,37 @@ function nextSlide(){
     showSlide(slideIndex);
 }
 
-//tile expanding code
-const tile = document.querySelectorAll('.event')
+let currentTileIndex = 0;
+const tiles = document.querySelectorAll('.event');
+const modal = document.getElementById("cont");
+const modalBody = document.getElementById("contbody");
 
+function openTile(index) {
+    currentTileIndex = index;
+    modalBody.textContent = tiles[index].textContent;
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Disable scroll on the main page
+}
+
+function closeTile() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Enable scroll on the main page
+}
+
+function showTile(index) {
+    modalBody.textContent = tiles[index].textContent;
+}
+
+document.onkeydown = function(event) {
+    if (modal.style.display === "block") {
+        if (event.key === "ArrowRight") {
+            currentTileIndex = (currentTileIndex + 1) % tiles.length;
+            showTile(currentTileIndex);
+        } else if (event.key === "ArrowLeft") {
+            currentTileIndex = (currentTileIndex - 1 + tiles.length) % tiles.length;
+            showTile(currentTileIndex);
+        } else if (event.key === "Escape") {
+            closeTile();
+        }
+    }
+};
