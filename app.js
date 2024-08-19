@@ -46,18 +46,18 @@ function openTile(index) {
     currentTileIndex = index;
     modalBody.textContent = tiles[index].textContent;
     modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // Disable scroll on the main page
+    document.body.style.overflow = "hidden";
 }
 
 function closeTile() {
     modal.style.display = "none";
-    document.body.style.overflow = "auto"; // Enable scroll on the main page
+    document.body.style.overflow = "auto"; 
 }
 
 function showTile(index) {
     modalBody.textContent = tiles[index].textContent;
 }
-
+//stack overflow code
 document.onkeydown = function(event) {
     if (modal.style.display === "block") {
         if (event.key === "ArrowRight") {
